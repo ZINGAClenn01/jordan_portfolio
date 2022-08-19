@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="maquette2.css">
+    <title>A PROPOS de Moi</title>
+    <script src="https://kit.fontawesome.com/b6e281d241.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="contenair">
+        <div class="yellow"></div>
+        <div class="black">
+            <nav class="nav">
+                <div class="nom" style="display: flex; align-items: center;"><img class="img1"  src="j-icon-21.jpg" alt=""><h5 style="color: black;">ORDAN</h5></div>
+                <a style="text-decoration: none;" href="index.html">ACCUEIL</a>
+                <a style="text-decoration: none; color:yellow;" href="apropos.html">A PROPOS</a>
+                <a href="formation.html">FORMATION</a>
+                <a style="text-decoration: none;" href="traveaux.html">MES TRAVAUX</a>
+                <a style="text-decoration: none;" href="contact.html">CONTACTEZ MOI</a>
+                <!-- <div class="icone1"><i style="color: yellow; font-size:20px;" class="fa-solid fa-magnifying-glass"></i></div> -->
+                <nav class="dropdown">
+                    <button class="nav-toggle">Menu</button>
+                    <ul class="menu">
+                      <li><a href="index.html">ACCUEIL</a></li>
+                      <li><a href="apropos.html">A PROPOS</a></li>
+                      <li><a href="formation.html">FORMATION</a></li>
+                      <li><a href="traveaux.html">MES TRAVAUX</a></li>
+                      <li> <a href="contact.html">CONTACTEZ MOI</a></li>
+                    </ul>
+                  </nav>
+            </nav>
+            <div>
+                <div class="text">JE SUIS <span> YENO JORDAN <br></span>  DEVELOPPEUR<span> WEB & WEB MOBILE<br></span> Je suis à la
+                    base développeur d'application <br> bureau windows et je suis passioné de web  </div>
+                <a style="position: absolute;
+                width: 25%;
+                left: 60px;
+                margin: auto;
+                bottom: 20vw;color: white;text-decoration: none;font-size: 25px;width: 50%;" href=""> N'hésité pas à cliquer pour decouvir mes traveaux</a>
+                <a class="btn" href="formation.html">FORMATION</a>
+                <div class="competences">
+                    <h2>COMPETENCES</h2>
+                    <div class="mom-competences">
+                        <div class="icon-tete-competence">
+                            <div class="align"><i class="fa-solid fa-code"></i> <h2>TECHNO</h2></div>
+                            <div class="align"><i class="fa-solid fa-screwdriver-wrench"></i> <h2>OUTILS</h2></div>
+                            
+                        </div>
+                        <div class="competences2">
+                            <div class="competence-icon1">
+                                <div class="icon-text"><i class="fa-solid fa-check"></i><h2>html</h2></div>
+                                <div class="icon-text"><i class="fa-solid fa-check"></i><h2>css</h2></div>
+                                <div class="icon-text"><i class="fa-solid fa-check"></i><h2>javascript</div>
+                                <div class="icon-text"><i class="fa-solid fa-check"></i><h2>React Js</h2></div>
+                            </div>
+                            <div class="competence-icon2">
+                                <div class="icon-text"><i class="fa-solid fa-check"></i><h2>vs code</h2></div>
+                                <div class="icon-text"><i class="fa-solid fa-check"></i><h2>Figma</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+            <div>
+                <div class="contact">
+                    <!-- <a style="color: yellow;position: absolute;left: 320px;bottom: 65px;" href="#">service</a> -->
+                    <h3 style="color:yellow;position: absolute;left: 220px;bottom: 25px;">DEVELOPPEUR FULL STACK</h3>
+                    <div class="ligne"></div>
+                </div>
+                <div class="icone">
+                    <i style="color: yellow; font-size:25px;" class="fa-brands fa-whatsapp-square"></i>
+                    <i style="color: yellow; font-size:25px;" class="fa-brands fa-facebook-square"></i>
+                    <i style="color: yellow; font-size:25px;" class="fa-brands fa-linkedin"></i>
+                    <i style="color: yellow; font-size:25px;" class="fa-solid fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        document.documentElement.className = "js";
+
+var menu = document.querySelector( '.menu' ),
+button = document.querySelector('.nav-toggle'),
+dropdown = document.querySelector('.dropdown');
+
+button.onclick = function() {
+classie.toggle( menu, 'menu-active' );
+};
+
+// Close menu when clicking outside
+// See: https://css-tricks.com/dangers-stopping-event-propagation/
+document.addEventListener('click', function(event) {
+if (event.target !== dropdown && !dropdown.contains(event.target)) {
+    // hide the menu
+  classie.removeClass(menu, "menu-active");
+}
+});
+
+
+( function( window ) {
+
+'use strict';
+
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+hasClass = function( elem, c ) {
+return elem.classList.contains( c );
+};
+addClass = function( elem, c ) {
+elem.classList.add( c );
+};
+removeClass = function( elem, c ) {
+elem.classList.remove( c );
+};
+}
+else {
+hasClass = function( elem, c ) {
+return classReg( c ).test( elem.className );
+};
+addClass = function( elem, c ) {
+if ( !hasClass( elem, c ) ) {
+  elem.className = elem.className + ' ' + c;
+}
+};
+removeClass = function( elem, c ) {
+elem.className = elem.className.replace( classReg( c ), ' ' );
+};
+}
+
+function toggleClass( elem, c ) {
+var fn = hasClass( elem, c ) ? removeClass : addClass;
+fn( elem, c );
+}
+
+var classie = {
+// full names
+hasClass: hasClass,
+addClass: addClass,
+removeClass: removeClass,
+toggleClass: toggleClass,
+// short names
+has: hasClass,
+add: addClass,
+remove: removeClass,
+toggle: toggleClass
+};
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+// AMD
+define( classie );
+} else if ( typeof exports === 'object' ) {
+// CommonJS
+module.exports = classie;
+} else {
+// browser global
+window.classie = classie;
+}
+
+})( window );
+
+</script>
+
+
+<script src="//code.tidio.co/ff8wqxgqfdv1qifxi2joz1qypgbfzv2n.js" async></script>
+</body>
+</html>

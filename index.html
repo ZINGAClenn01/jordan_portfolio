@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="maquette.css">
+    <title>ACCUEIL</title>
+    <script src="https://kit.fontawesome.com/b6e281d241.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="contenair">
+        <div class="yellow"></div>
+        <div class="black">
+            <nav class="nav">
+                <div class="navigation"><img class="img1"  src="j-icon-21.jpg" alt=""><h5 class="h5-jordan">ORDAN</h5></div>
+                    <a href="index.html">ACCUEIL</a>
+                    <a href="apropos.html">A PROPOS</a>
+                    <a href="formation.html">FORMATION</a>
+                    <a href="traveaux.html">MES TRAVAUX</a>
+                    <a href="contact.html">CONTACTEZ MOI</a>
+                <div class="icone1"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </nav>
+            <nav id="nav">
+                <div class="nom" style="display: flex; align-items: center;"><img class="img1"  src="j-icon-21.jpg" alt=""><h5>ORDAN</h5></div>
+                <!-- <div class="icone1"><i class="fa-solid fa-magnifying-glass"></i></div> -->
+                <nav class="dropdown">
+                    <button class="nav-toggle">Menu</button>
+                    <ul class="menu">
+                      <li><a href="index.html">ACCUEIL</a></li>
+                      <li><a href="apropos.html">A PROPOS</a></li>
+                      <li><a href="formation.html">FORMATION</a></li>
+                      <li><a href="maquette3.html">MES TRAVAUX</a></li>
+                      <li> <a href="contact.html">CONTACTEZ MOI</a></li>
+                    </ul>
+                  </nav>
+            </nav>
+            <div class="bienvenu">
+                <div class="bien">BIENVENUE SUR <br> MON PORTFOLIO</div>
+                <div class="bien" id="bai">BIENVENUE SUR MON PORTFOLIO</div>
+                <a class="btn centre" href="apropos.html">A PROPOS DE MOI</a>
+                <div class="img2"><img class="imge" src="Ellipse 1.png" alt=""></div>
+                <div class="image"><img class="image" id="image" src="Ellipse 1.png" alt=""></div>
+            </div>
+            <div>
+                <div class="contact">
+                    <!-- <a style="color: yellow;" href="maquette3.html">service</a> -->
+                    <h3 class="titre-h3">DEVELOPPEUR FULL STACK</h3>
+                    <div class="ligne"></div>
+                    <div id="ligne"></div>
+                </div>
+                <div class="icone">
+                    <i class="fa-brands fa-whatsapp-square"></i>
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <script type="text/javascript">
+            document.documentElement.className = "js";
+
+var menu = document.querySelector( '.menu' ),
+    button = document.querySelector('.nav-toggle'),
+    dropdown = document.querySelector('.dropdown');
+
+button.onclick = function() {
+    classie.toggle( menu, 'menu-active' );
+};
+
+// Close menu when clicking outside
+// See: https://css-tricks.com/dangers-stopping-event-propagation/
+document.addEventListener('click', function(event) {
+    if (event.target !== dropdown && !dropdown.contains(event.target)) {
+        // hide the menu
+      classie.removeClass(menu, "menu-active");
+    }
+});
+
+
+( function( window ) {
+
+'use strict';
+
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+  hasClass = function( elem, c ) {
+    return elem.classList.contains( c );
+  };
+  addClass = function( elem, c ) {
+    elem.classList.add( c );
+  };
+  removeClass = function( elem, c ) {
+    elem.classList.remove( c );
+  };
+}
+else {
+  hasClass = function( elem, c ) {
+    return classReg( c ).test( elem.className );
+  };
+  addClass = function( elem, c ) {
+    if ( !hasClass( elem, c ) ) {
+      elem.className = elem.className + ' ' + c;
+    }
+  };
+  removeClass = function( elem, c ) {
+    elem.className = elem.className.replace( classReg( c ), ' ' );
+  };
+}
+
+function toggleClass( elem, c ) {
+  var fn = hasClass( elem, c ) ? removeClass : addClass;
+  fn( elem, c );
+}
+
+var classie = {
+  // full names
+  hasClass: hasClass,
+  addClass: addClass,
+  removeClass: removeClass,
+  toggleClass: toggleClass,
+  // short names
+  has: hasClass,
+  add: addClass,
+  remove: removeClass,
+  toggle: toggleClass
+};
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+  // AMD
+  define( classie );
+} else if ( typeof exports === 'object' ) {
+  // CommonJS
+  module.exports = classie;
+} else {
+  // browser global
+  window.classie = classie;
+}
+
+})( window );
+
+</script>
+
+
+<script src="//code.tidio.co/ff8wqxgqfdv1qifxi2joz1qypgbfzv2n.js" async></script>
+</body>
+</html>

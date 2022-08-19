@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="maquette3.css">
+    <title>Mes TRAVEAUX</title>
+    <script src="https://kit.fontawesome.com/b6e281d241.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="contenair">
+        <div class="yellow"></div>
+        <div class="black">
+            <nav class="nav">
+                <div class="nom" style="display: flex; align-items: center;"><img class="img1"  src="j-icon-21.jpg" alt=""><h5 class="h5-one">ORDAN</h5></div>
+                <a href="index.html">ACCUEIL</a>
+                <a href="apropos.html">A PROPOS</a>
+                <a href="formation.html">FORMATION</a>
+                <a href="traveaux.html" style="color:yellow;">MES TRAVAUX</a>
+                <a href="contact.html">CONTACTEZ MOI</a>
+                <div class="icone1"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </nav>
+            <nav id="nav">
+                <div class="j-ordan" style="display: flex;"><img class="img1"  src="j-icon-21.jpg" alt=""><h5>ORDAN</h5></div>
+                <!-- <div class="icone1"><i class="fa-solid fa-magnifying-glass"></i></div> -->
+                <nav class="dropdown">
+                    <button class="nav-toggle">Menu</button>
+                    <ul class="menu">
+                      <li><a href="accueil.html">ACCUEIL</a></li>
+                      <li><a href="apropos.html">A PROPOS</a></li>
+                      <li><a href="formation.html">FORMATION</a></li>
+                      <li><a href="traveaux.html">MES TRAVAUX</a></li>
+                      <li> <a href="contact.html">CONTACTEZ MOI</a></li>
+                    </ul>
+                  </nav>
+            </nav>
+            <div class="puce" id="puce">
+                <ul class="tabs">
+                    <li data-tab-target="#home" class="active tab">Maquette</li>
+                    <li data-tab-target="#pricing" class="tab">Site Web</li>
+                    <li data-tab-target="#about" class="tab">React JS</li>
+                    <li data-tab-target="#news" class="tab">Node JS</li>
+                  </ul>
+                  
+                  <div class="tab-content" style=" color: white; margin-top:8vw;">
+                    <div id="home" data-tab-content class="active">
+                      
+                      <p><a href="https://www.figma.com/file/P5Zdvr9wnluqGc0hvC8bfB/Untitled?node-id=0%3A1"><p><div class="text"><img class="image" src="./Untitled.png" alt=""></div></a>
+                      <a href="https://drive.google.com/drive/folders/1M4cI9ZCCWfJkc3qBEuvypHHia4z6UcoK"><div class="img2"><img class="image2" src="./Jordane maquette facebook.png" alt=""></div></a></p>
+                    </div>
+                    <div id="pricing" data-tab-content>
+                      <p><a href="https://jhonn-jordan.github.io/gameloft/"><p><div class="text"><img class="image" src="./Capture.PNG" alt=""></div></a>
+                        <a href="https://jhonn-jordan.github.io/inkrdev/"><div class="img2"><img class="image2" src="./Capture2.PNG" alt=""></div></a></p>
+                    </div>
+                    <div id="about" data-tab-content>
+                      <p><a href="https://jhonn-jordan.github.io/gameloft/"><p><div class="text"><img class="image" src="./Gabon - 9 provinces select open.png" alt="">
+                        </div></a></p>
+                    </div>
+                    <div id="news" data-tab-content>
+                      
+                      <p><button type="submit" class="sf-btn add">
+                        <div class="icn-sf">
+                          <span class="line line-1"></span>
+                          <span class="line line-2"></span>
+                        </div>
+                        <div class="loader"></div>
+                      </button></p>
+                    </div>
+                  
+                  </div>
+            </div> 
+            <!-- <div class="pucs" id="pucs" style="display: flex;">
+                <ul class="pucess" style="display: flex;">
+                    <li><a class="lie" href="#">Site web</a></li>
+                    <li><a class="lie"  href="#">UI Design</a></li>
+                    <li><a class="lie" class="LI" href="#">APP Mobile</a></li>
+                </ul>
+            </div>  -->
+            <div class="realisation">
+                
+                <a class="btn" href="contact.html">CONTACTEZ MOI</a>
+            </div>
+            <div>
+                <div class="contact">
+                    <!-- <a href="">service</a> -->
+                    <h3>DEVELOPPEUR FULL STACK</h3>
+                    <div class="ligne"></div>
+                </div>
+                <div class="icone">
+                    <i style="color: yellow; font-size:25px;" class="fa-brands fa-whatsapp-square"></i>
+                    <i style="color: yellow; font-size:25px;" class="fa-brands fa-facebook-square"></i>
+                    <i style="color: yellow; font-size:25px;" class="fa-brands fa-linkedin"></i>
+                    <i style="color: yellow; font-size:25px;" class="fa-solid fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        document.documentElement.className = "js";
+
+var menu = document.querySelector( '.menu' ),
+button = document.querySelector('.nav-toggle'),
+dropdown = document.querySelector('.dropdown');
+
+button.onclick = function() {
+classie.toggle( menu, 'menu-active' );
+};
+
+// Close menu when clicking outside
+// See: https://css-tricks.com/dangers-stopping-event-propagation/
+document.addEventListener('click', function(event) {
+if (event.target !== dropdown && !dropdown.contains(event.target)) {
+    // hide the menu
+  classie.removeClass(menu, "menu-active");
+}
+});
+
+const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content]')
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.tabTarget)
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove('active')
+    })
+    tabs.forEach(tab => {
+      tab.classList.remove('active')
+    })
+    tab.classList.add('active')
+    target.classList.add('active')
+  })
+})
+</script>
+
+<script type="text/javascript">
+    document.documentElement.className = "js";
+
+var menu = document.querySelector( '.menu' ),
+button = document.querySelector('.nav-toggle'),
+dropdown = document.querySelector('.dropdown');
+
+button.onclick = function() {
+classie.toggle( menu, 'menu-active' );
+};
+
+// Close menu when clicking outside
+// See: https://css-tricks.com/dangers-stopping-event-propagation/
+document.addEventListener('click', function(event) {
+if (event.target !== dropdown && !dropdown.contains(event.target)) {
+// hide the menu
+classie.removeClass(menu, "menu-active");
+}
+});
+
+
+( function( window ) {
+
+'use strict';
+
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+hasClass = function( elem, c ) {
+return elem.classList.contains( c );
+};
+addClass = function( elem, c ) {
+elem.classList.add( c );
+};
+removeClass = function( elem, c ) {
+elem.classList.remove( c );
+};
+}
+else {
+hasClass = function( elem, c ) {
+return classReg( c ).test( elem.className );
+};
+addClass = function( elem, c ) {
+if ( !hasClass( elem, c ) ) {
+elem.className = elem.className + ' ' + c;
+}
+};
+removeClass = function( elem, c ) {
+elem.className = elem.className.replace( classReg( c ), ' ' );
+};
+}
+
+function toggleClass( elem, c ) {
+var fn = hasClass( elem, c ) ? removeClass : addClass;
+fn( elem, c );
+}
+
+var classie = {
+// full names
+hasClass: hasClass,
+addClass: addClass,
+removeClass: removeClass,
+toggleClass: toggleClass,
+// short names
+has: hasClass,
+add: addClass,
+remove: removeClass,
+toggle: toggleClass
+};
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+// AMD
+define( classie );
+} else if ( typeof exports === 'object' ) {
+// CommonJS
+module.exports = classie;
+} else {
+// browser global
+window.classie = classie;
+}
+
+})( window );
+
+$(function() {
+	$('.sf-btn').on('click', function(){
+    if($(this).hasClass('added') && $(this).hasClass('loading'))
+    {
+	  	$(this).removeClass('loading'); 
+    } else if ($(this).hasClass('loading'))
+    {
+      $(this).addClass('added');
+    } else if ($(this).hasClass('added')) 
+    {
+      $(this).removeClass('added');
+    } else 
+    {
+      $(this).addClass('added').addClass('loading');
+    }
+  });
+});
+
+</script>
+
+
+
+
+<script src="//code.tidio.co/ff8wqxgqfdv1qifxi2joz1qypgbfzv2n.js" async></script>
+
+</body>
+</html>

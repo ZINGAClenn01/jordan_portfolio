@@ -14,12 +14,12 @@
         <div class="black">
             <nav class="nav">
                 <div class="navigation"><img class="img1"  src="j-icon-21.jpg" alt=""><h5 class="h5-jordan">ORDAN</h5></div>
-                    <a href="index.html">ACCUEIL</a>
+                    <a style="color:rgb(253, 253, 18);" href="index.html">ACCUEIL</a>
                     <a href="apropos.html">A PROPOS</a>
                     <a href="formation.html">FORMATION</a>
                     <a href="traveaux.html">MES TRAVAUX</a>
                     <a href="contact.html">CONTACTEZ MOI</a>
-                <div class="icone1"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <!-- <div class="icone1"><i class="fa-solid fa-magnifying-glass"></i></div> -->
             </nav>
             <nav id="nav">
                 <div class="nom" style="display: flex; align-items: center;"><img class="img1"  src="j-icon-21.jpg" alt=""><h5>ORDAN</h5></div>
@@ -42,6 +42,29 @@
                 <div class="img2"><img class="imge" src="Ellipse 1.png" alt=""></div>
                 <div class="image"><img class="image" id="image" src="Ellipse 1.png" alt=""></div>
             </div>
+
+            <a class="button" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Télécharger mon C-V
+            </a>
+
+
+            
+<div class="word">
+	<span>J</span>
+	<span>o</span>
+	<span>r</span>
+	<span>d</span>
+	<span>a</span>
+	<span>n</span>
+	<!-- <span>L</span> -->
+	
+</div>
+
+            
             <div>
                 <div class="contact">
                     <!-- <a style="color: yellow;" href="maquette3.html">service</a> -->
@@ -143,6 +166,25 @@ if ( typeof define === 'function' && define.amd ) {
 }
 
 })( window );
+
+
+
+const spans = document.querySelectorAll('.word span');
+
+spans.forEach((span, idx) => {
+	span.addEventListener('click', (e) => {
+		e.target.classList.add('active');
+	});
+	span.addEventListener('animationend', (e) => {
+		e.target.classList.remove('active');
+	});
+	
+	setTimeout(() => {
+		span.classList.add('active');
+	}, 750 * (idx+1))
+}); 
+
+
 
 </script>
 

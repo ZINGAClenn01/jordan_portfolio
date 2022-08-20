@@ -28,8 +28,13 @@
 
 .nav a{
     color: black;
+    text-decoration: none;
 }
 
+.nav a:hover{
+    color: black;
+    text-decoration: none;
+}
 .nav .conct{
     color: black;
 }
